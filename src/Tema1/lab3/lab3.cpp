@@ -23,6 +23,60 @@ int dir1 = 1;
  */
 
 
+// void drawFilledCircle(GLfloat x, GLfloat y, GLfloat radius){
+// 	int i;
+// 	int triangleAmount = 20; //# of triangles used to draw circle
+	
+// 	//GLfloat radius = 0.8f; //radius
+// 	GLfloat twicePi = 2.0f * M_PI;
+	
+// 	glBegin(GL_TRIANGLE_FAN);
+// 		glVertex2f(x, y); // center of circle
+// 		for(i = 0; i <= triangleAmount;i++) { 
+// 			glVertex2f(
+// 		            x + (radius * cos(i *  twicePi / triangleAmount)), 
+// 			    y + (radius * sin(i * twicePi / triangleAmount))
+// 			);
+// 		}
+// 	glEnd();
+// }
+
+void drawCircle(float cx, float cy, float r, int num_segments)
+{
+    float theta = 3.1415926 * 2 / float(num_segments);
+    float tangetial_factor = tanf(theta);//calculate the tangential factor 
+
+    float radial_factor = cosf(theta);//calculate the radial factor 
+
+    float x = r;//we start at angle = 0 
+
+    float y = 0;
+    glLineWidth(2);
+    glBegin(GL_LINE_LOOP);
+    for (int ii = 0; ii < num_segments; ii++)
+    {
+        glVertex2f(x + cx, y + cy);//output vertex 
+
+        //calculate the tangential vector 
+        //remember, the radial vector is (x, y) 
+        //to get the tangential vector we flip those coordinates and negate one of them 
+
+        float tx = -y;
+        float ty = x;
+
+        //add the tangential vector 
+
+        x += tx * tangetial_factor;
+        y += ty * tangetial_factor;
+
+        //correct using the radial factor 
+
+        x *= radial_factor;
+        y *= radial_factor;
+    }
+    glEnd();
+}
+
 Lab3::Lab3()
 {
 }
@@ -74,7 +128,8 @@ void Lab3::Init()
     AddMeshToList(square3);
 
     Mesh* square4 = object2D::CreateSquare("square4", corner, squareSide, glm::vec3(1, 0, 1));
-    AddMeshToList(square4);    
+    AddMeshToList(square4);
+
 }
 
 
@@ -107,6 +162,9 @@ void Lab3::Update(float deltaTimeSeconds)
     //     dir_tx = 1;
     // }
 
+    // drawFilledCircle(100, 100, 0.5);
+    drawCircle(250, 250, 100, 360);
+
     modelMatrix = glm::mat3(1);
     modelMatrix *= transform2D::Translate(tx, tx);
     // TODO(student): Create animations by multiplying the current
@@ -115,6 +173,7 @@ void Lab3::Update(float deltaTimeSeconds)
 
     RenderMesh2D(meshes["circle"], shaders["VertexColor"], modelMatrix);
 
+    
 
     sx += deltaTimeSeconds *1 * directie;
     // cout << sx << " ";

@@ -4939,9 +4939,9 @@ CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o: ../src/core/gpu/textur
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/move.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/memoryfwd.h \
@@ -5813,9 +5813,9 @@ CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o: ../src/core/
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/move.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/functexcept.h \
@@ -7101,9 +7101,9 @@ CMakeFiles/GFXFramework.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/move.h \
   /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/functexcept.h \
@@ -7539,8 +7539,7 @@ CMakeFiles/GFXFramework.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/stream_iterator.h \
   ../src/core/managers/texture_manager.h \
   ../src/utils/memory_utils.h \
-  ../src/Tema1/lab3/lab3.h \
-  ../src/Tema1/lab3/lab3_vis2D.h
+  ../src/Tema1/lab3/lab3.h
 
 CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o: ../src/utils/gl_utils.cpp \
   /usr/include/stdc-predef.h \
@@ -7923,8 +7922,6 @@ CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o: ../src/utils/text_utils.
 ../src/utils/text_utils.cpp:
 
 ../src/utils/gl_utils.cpp:
-
-../src/Tema1/lab3/lab3_vis2D.h:
 
 ../deps/api/stb/stb_image_write.h:
 

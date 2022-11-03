@@ -1,7 +1,7 @@
 CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o: \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/core/managers/texture_manager.cpp \
+ /home/ion/tema1-egc/src/core/managers/texture_manager.cpp \
  /usr/include/stdc-predef.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/core/managers/texture_manager.h \
+ /home/ion/tema1-egc/src/core/managers/texture_manager.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -141,15 +141,14 @@ CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/core/gpu/texture2D.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/gl_utils.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/deps/api/GL/glew.h \
- /usr/include/GL/glu.h /usr/include/GL/gl.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/core/managers/resource_path.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/text_utils.h \
- /usr/include/c++/11/sstream /usr/include/c++/11/istream \
- /usr/include/c++/11/ios /usr/include/c++/11/exception \
- /usr/include/c++/11/bits/exception_ptr.h \
+ /home/ion/tema1-egc/src/core/gpu/texture2D.h \
+ /home/ion/tema1-egc/src/utils/gl_utils.h \
+ /home/ion/tema1-egc/deps/api/GL/glew.h /usr/include/GL/glu.h \
+ /usr/include/GL/gl.h \
+ /home/ion/tema1-egc/src/core/managers/resource_path.h \
+ /home/ion/tema1-egc/src/utils/text_utils.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/istream /usr/include/c++/11/ios \
+ /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
  /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
  /usr/include/c++/11/bits/ios_base.h \
@@ -171,4 +170,4 @@ CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iterator \
  /usr/include/c++/11/bits/stream_iterator.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/memory_utils.h
+ /home/ion/tema1-egc/src/utils/memory_utils.h
