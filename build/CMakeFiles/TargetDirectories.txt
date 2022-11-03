@@ -1,0 +1,3 @@
+/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles/GFXFramework.dir
+/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles/edit_cache.dir
+/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles/rebuild_cache.dir
