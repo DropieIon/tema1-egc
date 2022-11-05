@@ -73,7 +73,8 @@ Mesh* object2D::CreateCircle(
 Mesh* object2D::CreateTriangle(
     const std::string &name,
     glm::vec3 leftBottomCorner,
-    int length,
+    glm::vec3 point1,
+    glm::vec3 point2,
     glm::vec3 color)
 {
     glm::vec3 corner = leftBottomCorner;
@@ -83,9 +84,9 @@ Mesh* object2D::CreateTriangle(
     // float y = leftBottomCorner[1];
 
     std::vector<VertexFormat> vertices = {
-        VertexFormat(corner + glm::vec3(2 *length, 0, 0), color),
         VertexFormat(corner, color),
-        VertexFormat(corner + glm::vec3(length, length, 0), color),
+        VertexFormat(corner + point1, color),
+        VertexFormat(corner + point2, color),
         // VertexFormat(corner + glm::vec3(0, length, 0), color)
     };
 
@@ -104,7 +105,6 @@ Mesh* object2D::CreateTriangle(
     // {
     //     indices.push_back(i);
     // }
-
     circle->InitFromData(vertices, indices);
     return circle;
 }

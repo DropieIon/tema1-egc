@@ -12,7 +12,7 @@ int directie = 1, dir_tx = 1;
 int tx = 150, ty = 250;
 float sx = 2, sy = 2;
 float rad = 50;
-float rad1 = M_PI;
+float rad1 = 0, rad2 = M_PI;
 int tx1 = 150;
 int dir1 = 1;
 
@@ -94,20 +94,23 @@ void Lab3::Init()
 
     // Mesh* square4 = object2D::CreateSquare("square4", corner, squareSide, glm::vec3(1, 0, 1));
     // AddMeshToList(square4);
+
+    float bodyX = 200, bodyY = 400;
+    float wingX = 80, wingY = 125;
     
     Mesh* head = object2D::CreateCircle("head", corner, 60, 50, glm::vec3(48/255.0f, 87/255.0f, 55/255.0f));
     AddMeshToList(head);
 
-    Mesh* wing1 = object2D::CreateTriangle("wing1", corner, 60, glm::vec3(88/255.0f, 58/255.0f, 39/255.0f));
+    Mesh* wing1 = object2D::CreateTriangle("wing1", corner, glm::vec3(wingX*35/100.0f, wingY, 0), glm::vec3(wingX, 0, 0), glm::vec3(88/255.0f, 58/255.0f, 39/255.0f));
     AddMeshToList(wing1);
 
-    Mesh* wing2 = object2D::CreateTriangle("wing2", corner, 60, glm::vec3(88/255.0f, 58/255.0f, 39/255.0f));
+    Mesh* wing2 = object2D::CreateTriangle("wing2", corner, glm::vec3(wingX*35/100.0f, wingY, 0), glm::vec3(wingX, 0, 0), glm::vec3(88/255.0f, 58/255.0f, 39/255.0f));
     AddMeshToList(wing2);
 
-    Mesh* body = object2D::CreateTriangle("body", corner, 120, glm::vec3(88/255.0f, 58/255.0f, 39/255.0f));
+    Mesh* body = object2D::CreateTriangle("body", corner, glm::vec3(bodyX/2.0f, bodyY, 0), glm::vec3(bodyX, 0, 0), glm::vec3(88/255.0f, 58/255.0f, 39/255.0f));
     AddMeshToList(body);
 
-    Mesh* beak = object2D::CreateTriangle("beak", corner, 60, glm::vec3(231/255.0f, 204/255.0f, 57/255.0f));
+    Mesh* beak = object2D::CreateTriangle("beak", corner, glm::vec3(25, 100, 0), glm::vec3(50, 0, 0), glm::vec3(231/255.0f, 204/255.0f, 57/255.0f));
     AddMeshToList(beak);
 
 }
@@ -150,28 +153,43 @@ void Lab3::Update(float deltaTimeSeconds)
 
     // RenderMesh2D(meshes["circle1"], shaders["VertexColor"], modelMatrix);
 
+
+    sx = 0.65f;
+    rad1 += 2*deltaTimeSeconds * dir1;
+    rad2 += 2*deltaTimeSeconds * -dir1;
+    if(rad1 > M_PI/10.0f) {
+        dir1 = -1;
+    }
+    if(rad1 < -M_PI/9.0f)
+        dir1 = 1;
     modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(100, 100);
+    modelMatrix *= transform2D::Translate(425, 385) * transform2D::Scale(sx, sx) * transform2D::Rotate(rad1) * transform2D::Translate(-50, -50);
     RenderMesh2D(meshes["wing1"], shaders["VertexColor"], modelMatrix);
 
     
 
     modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(200, 200);
+    modelMatrix *= transform2D::Translate(538, 425)* transform2D::Rotate(rad2) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
     RenderMesh2D(meshes["wing2"], shaders["VertexColor"], modelMatrix);
 
 
     modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(300, 300);
+    modelMatrix *= transform2D::Translate(500, 300);
     RenderMesh2D(meshes["head"], shaders["VertexColor"], modelMatrix);
 
 
+
+    sx = 0.45f;
     modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(400, 400);
+    modelMatrix *= transform2D::Translate(385, 470) * transform2D::Rotate(M_PI * 3/2.0f) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
     RenderMesh2D(meshes["body"], shaders["VertexColor"], modelMatrix);
 
+    // modelMatrix = glm::mat3(1);
+    // modelMatrix *= transform2D::Translate(500, 500);
+    sx = 0.45f;
     modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(500, 500);
+
+    modelMatrix *= transform2D::Translate(625 , 425) * transform2D::Rotate(M_PI * 3/2.0f) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
     RenderMesh2D(meshes["beak"], shaders["VertexColor"], modelMatrix);
 
     // sx += deltaTimeSeconds *1 * directie;
@@ -186,9 +204,6 @@ void Lab3::Update(float deltaTimeSeconds)
     //     sx = 1;
     // }
     
-    // // problema: trebuie inmultit cu vectorul de pozitie
-    // modelMatrix = glm::mat3(1);
-    // modelMatrix *= transform2D::Translate(450 , 300) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
     // // TODO(student): Create animations by multiplying the current
     // // transform matrix with the matrices you just implemented
     // // Remember, the last matrix in the chain will take effect first!
