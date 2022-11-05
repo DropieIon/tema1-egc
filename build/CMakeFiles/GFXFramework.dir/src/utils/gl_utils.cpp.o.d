@@ -1,8 +1,7 @@
 CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o: \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/gl_utils.cpp \
- /usr/include/stdc-predef.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/gl_utils.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/deps/api/GL/glew.h \
+ /home/ion/tema1-egc/src/utils/gl_utils.cpp /usr/include/stdc-predef.h \
+ /home/ion/tema1-egc/src/utils/gl_utils.h \
+ /home/ion/tema1-egc/deps/api/GL/glew.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

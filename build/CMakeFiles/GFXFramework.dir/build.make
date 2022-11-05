@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/ciubotaruion/MyEGC/Teme/Tema 1"
+CMAKE_SOURCE_DIR = /home/ion/tema1-egc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/ciubotaruion/MyEGC/Teme/Tema 1/build"
+CMAKE_BINARY_DIR = /home/ion/tema1-egc/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GFXFramework.dir/depend.make
@@ -72,282 +72,282 @@ include CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o: ../src/Tema1/lab3/lab3.cpp
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o -MF CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/Tema1/lab3/lab3.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o -MF CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o -c /home/ion/tema1-egc/src/Tema1/lab3/lab3.cpp
 
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/Tema1/lab3/lab3.cpp" > CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/Tema1/lab3/lab3.cpp > CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/Tema1/lab3/lab3.cpp" -o CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/Tema1/lab3/lab3.cpp -o CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o: ../src/Tema1/lab3/object2D.cpp
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o -MF CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/Tema1/lab3/object2D.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o -MF CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o -c /home/ion/tema1-egc/src/Tema1/lab3/object2D.cpp
 
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/Tema1/lab3/object2D.cpp" > CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/Tema1/lab3/object2D.cpp > CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/Tema1/lab3/object2D.cpp" -o CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/Tema1/lab3/object2D.cpp -o CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o: ../src/components/camera_input.cpp
 CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o -MF CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/camera_input.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o -MF CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o -c /home/ion/tema1-egc/src/components/camera_input.cpp
 
 CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/camera_input.cpp" > CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/components/camera_input.cpp > CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/camera_input.cpp" -o CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/components/camera_input.cpp -o CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o: ../src/components/scene_input.cpp
 CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o -MF CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/scene_input.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o -MF CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o -c /home/ion/tema1-egc/src/components/scene_input.cpp
 
 CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/scene_input.cpp" > CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/components/scene_input.cpp > CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/scene_input.cpp" -o CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/components/scene_input.cpp -o CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o: ../src/components/simple_scene.cpp
 CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o -MF CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/simple_scene.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o -MF CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.o -c /home/ion/tema1-egc/src/components/simple_scene.cpp
 
 CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/simple_scene.cpp" > CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/components/simple_scene.cpp > CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/simple_scene.cpp" -o CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/components/simple_scene.cpp -o CMakeFiles/GFXFramework.dir/src/components/simple_scene.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o: ../src/components/text_renderer.cpp
 CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o -MF CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/text_renderer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o -MF CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.o -c /home/ion/tema1-egc/src/components/text_renderer.cpp
 
 CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/text_renderer.cpp" > CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/components/text_renderer.cpp > CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/components/text_renderer.cpp" -o CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/components/text_renderer.cpp -o CMakeFiles/GFXFramework.dir/src/components/text_renderer.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o: ../src/core/engine.cpp
 CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/engine.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/engine.cpp.o -c /home/ion/tema1-egc/src/core/engine.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/engine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/engine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/engine.cpp" > CMakeFiles/GFXFramework.dir/src/core/engine.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/engine.cpp > CMakeFiles/GFXFramework.dir/src/core/engine.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/engine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/engine.cpp" -o CMakeFiles/GFXFramework.dir/src/core/engine.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/engine.cpp -o CMakeFiles/GFXFramework.dir/src/core/engine.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o: ../src/core/gpu/frame_buffer.cpp
 CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/frame_buffer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.o -c /home/ion/tema1-egc/src/core/gpu/frame_buffer.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/frame_buffer.cpp" > CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/gpu/frame_buffer.cpp > CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/frame_buffer.cpp" -o CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/gpu/frame_buffer.cpp -o CMakeFiles/GFXFramework.dir/src/core/gpu/frame_buffer.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o: ../src/core/gpu/gpu_buffers.cpp
 CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/gpu_buffers.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.o -c /home/ion/tema1-egc/src/core/gpu/gpu_buffers.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/gpu_buffers.cpp" > CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/gpu/gpu_buffers.cpp > CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/gpu_buffers.cpp" -o CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/gpu/gpu_buffers.cpp -o CMakeFiles/GFXFramework.dir/src/core/gpu/gpu_buffers.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o: ../src/core/gpu/mesh.cpp
 CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/mesh.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.o -c /home/ion/tema1-egc/src/core/gpu/mesh.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/mesh.cpp" > CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/gpu/mesh.cpp > CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/mesh.cpp" -o CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/gpu/mesh.cpp -o CMakeFiles/GFXFramework.dir/src/core/gpu/mesh.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o: ../src/core/gpu/shader.cpp
 CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/shader.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o -c /home/ion/tema1-egc/src/core/gpu/shader.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/shader.cpp" > CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/gpu/shader.cpp > CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/shader.cpp" -o CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/gpu/shader.cpp -o CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o: ../src/core/gpu/texture2D.cpp
 CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/texture2D.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o -c /home/ion/tema1-egc/src/core/gpu/texture2D.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/texture2D.cpp" > CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/gpu/texture2D.cpp > CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/gpu/texture2D.cpp" -o CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/gpu/texture2D.cpp -o CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o: ../src/core/managers/texture_manager.cpp
 CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/managers/texture_manager.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.o -c /home/ion/tema1-egc/src/core/managers/texture_manager.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/managers/texture_manager.cpp" > CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/managers/texture_manager.cpp > CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/managers/texture_manager.cpp" -o CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/managers/texture_manager.cpp -o CMakeFiles/GFXFramework.dir/src/core/managers/texture_manager.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o: ../src/core/window/input_controller.cpp
 CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/input_controller.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.o -c /home/ion/tema1-egc/src/core/window/input_controller.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/input_controller.cpp" > CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/window/input_controller.cpp > CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/input_controller.cpp" -o CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/window/input_controller.cpp -o CMakeFiles/GFXFramework.dir/src/core/window/input_controller.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o: ../src/core/window/window_callbacks.cpp
 CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/window_callbacks.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.o -c /home/ion/tema1-egc/src/core/window/window_callbacks.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/window_callbacks.cpp" > CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/window/window_callbacks.cpp > CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/window_callbacks.cpp" -o CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/window/window_callbacks.cpp -o CMakeFiles/GFXFramework.dir/src/core/window/window_callbacks.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o: ../src/core/window/window_object.cpp
 CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/window_object.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.o -c /home/ion/tema1-egc/src/core/window/window_object.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/window_object.cpp" > CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/window/window_object.cpp > CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/window/window_object.cpp" -o CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/window/window_object.cpp -o CMakeFiles/GFXFramework.dir/src/core/window/window_object.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/core/world.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/core/world.cpp.o: ../src/core/world.cpp
 CMakeFiles/GFXFramework.dir/src/core/world.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/world.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/world.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/world.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/world.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/world.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/GFXFramework.dir/src/core/world.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/core/world.cpp.o -MF CMakeFiles/GFXFramework.dir/src/core/world.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/core/world.cpp.o -c /home/ion/tema1-egc/src/core/world.cpp
 
 CMakeFiles/GFXFramework.dir/src/core/world.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/core/world.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/world.cpp" > CMakeFiles/GFXFramework.dir/src/core/world.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/core/world.cpp > CMakeFiles/GFXFramework.dir/src/core/world.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/core/world.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/core/world.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/core/world.cpp" -o CMakeFiles/GFXFramework.dir/src/core/world.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/core/world.cpp -o CMakeFiles/GFXFramework.dir/src/core/world.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/main.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/GFXFramework.dir/src/main.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/GFXFramework.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/main.cpp.o -MF CMakeFiles/GFXFramework.dir/src/main.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/main.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/GFXFramework.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/main.cpp.o -MF CMakeFiles/GFXFramework.dir/src/main.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/main.cpp.o -c /home/ion/tema1-egc/src/main.cpp
 
 CMakeFiles/GFXFramework.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/main.cpp" > CMakeFiles/GFXFramework.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/main.cpp > CMakeFiles/GFXFramework.dir/src/main.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/main.cpp" -o CMakeFiles/GFXFramework.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/main.cpp -o CMakeFiles/GFXFramework.dir/src/main.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o: ../src/utils/gl_utils.cpp
 CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o -MF CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/utils/gl_utils.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o -MF CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.o -c /home/ion/tema1-egc/src/utils/gl_utils.cpp
 
 CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/utils/gl_utils.cpp" > CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/utils/gl_utils.cpp > CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/utils/gl_utils.cpp" -o CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/utils/gl_utils.cpp -o CMakeFiles/GFXFramework.dir/src/utils/gl_utils.cpp.s
 
 CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o: CMakeFiles/GFXFramework.dir/flags.make
 CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o: ../src/utils/text_utils.cpp
 CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o: CMakeFiles/GFXFramework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o -MF CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o -c "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/utils/text_utils.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o -MF CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o.d -o CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o -c /home/ion/tema1-egc/src/utils/text_utils.cpp
 
 CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/utils/text_utils.cpp" > CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ion/tema1-egc/src/utils/text_utils.cpp > CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.i
 
 CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ciubotaruion/MyEGC/Teme/Tema 1/src/utils/text_utils.cpp" -o CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ion/tema1-egc/src/utils/text_utils.cpp -o CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.s
 
 # Object files for target GFXFramework
 GFXFramework_OBJECTS = \
@@ -401,13 +401,13 @@ bin/Debug/GFXFramework: /usr/lib/x86_64-linux-gnu/libGLX.so
 bin/Debug/GFXFramework: /usr/lib/x86_64-linux-gnu/libGLU.so
 bin/Debug/GFXFramework: ../deps/prebuilt/GFXComponents/x86_64/GFXComponents.so
 bin/Debug/GFXFramework: CMakeFiles/GFXFramework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable bin/Debug/GFXFramework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ion/tema1-egc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable bin/Debug/GFXFramework"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GFXFramework.dir/link.txt --verbose=$(VERBOSE)
-	rm -rf /home/ciubotaruion/MyEGC/Teme/Tema\ 1/build/bin/Debug/src
-	ln -s /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src /home/ciubotaruion/MyEGC/Teme/Tema\ 1/build/bin/Debug/src
-	rm -rf /home/ciubotaruion/MyEGC/Teme/Tema\ 1/build/bin/Debug/assets
-	ln -s /home/ciubotaruion/MyEGC/Teme/Tema\ 1/assets /home/ciubotaruion/MyEGC/Teme/Tema\ 1/build/bin/Debug/assets
-	/usr/bin/cmake -E copy_if_different /home/ciubotaruion/MyEGC/Teme/Tema\ 1/deps/prebuilt/GFXComponents/x86_64/GFXComponents.so /home/ciubotaruion/MyEGC/Teme/Tema\ 1/build/bin/Debug
+	rm -rf /home/ion/tema1-egc/build/bin/Debug/src
+	ln -s /home/ion/tema1-egc/src /home/ion/tema1-egc/build/bin/Debug/src
+	rm -rf /home/ion/tema1-egc/build/bin/Debug/assets
+	ln -s /home/ion/tema1-egc/assets /home/ion/tema1-egc/build/bin/Debug/assets
+	/usr/bin/cmake -E copy_if_different /home/ion/tema1-egc/deps/prebuilt/GFXComponents/x86_64/GFXComponents.so /home/ion/tema1-egc/build/bin/Debug
 
 # Rule to build all files generated by this target.
 CMakeFiles/GFXFramework.dir/build: bin/Debug/GFXFramework
@@ -418,6 +418,6 @@ CMakeFiles/GFXFramework.dir/clean:
 .PHONY : CMakeFiles/GFXFramework.dir/clean
 
 CMakeFiles/GFXFramework.dir/depend:
-	cd "/home/ciubotaruion/MyEGC/Teme/Tema 1/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ciubotaruion/MyEGC/Teme/Tema 1" "/home/ciubotaruion/MyEGC/Teme/Tema 1" "/home/ciubotaruion/MyEGC/Teme/Tema 1/build" "/home/ciubotaruion/MyEGC/Teme/Tema 1/build" "/home/ciubotaruion/MyEGC/Teme/Tema 1/build/CMakeFiles/GFXFramework.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/ion/tema1-egc/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ion/tema1-egc /home/ion/tema1-egc /home/ion/tema1-egc/build /home/ion/tema1-egc/build /home/ion/tema1-egc/build/CMakeFiles/GFXFramework.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GFXFramework.dir/depend
 

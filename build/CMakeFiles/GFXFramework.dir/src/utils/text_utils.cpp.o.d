@@ -1,8 +1,6 @@
 CMakeFiles/GFXFramework.dir/src/utils/text_utils.cpp.o: \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/text_utils.cpp \
- /usr/include/stdc-predef.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/text_utils.h \
- /usr/include/c++/11/string \
+ /home/ion/tema1-egc/src/utils/text_utils.cpp /usr/include/stdc-predef.h \
+ /home/ion/tema1-egc/src/utils/text_utils.h /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

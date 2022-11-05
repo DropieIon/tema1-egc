@@ -1,8 +1,6 @@
 CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o: \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/core/gpu/shader.cpp \
- /usr/include/stdc-predef.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/core/gpu/shader.h \
- /usr/include/c++/11/string \
+ /home/ion/tema1-egc/src/core/gpu/shader.cpp /usr/include/stdc-predef.h \
+ /home/ion/tema1-egc/src/core/gpu/shader.h /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -141,9 +139,9 @@ CMakeFiles/GFXFramework.dir/src/core/gpu/shader.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/gl_utils.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/deps/api/GL/glew.h \
- /usr/include/GL/glu.h /usr/include/GL/gl.h /usr/include/c++/11/fstream \
+ /home/ion/tema1-egc/src/utils/gl_utils.h \
+ /home/ion/tema1-egc/deps/api/GL/glew.h /usr/include/GL/glu.h \
+ /usr/include/GL/gl.h /usr/include/c++/11/fstream \
  /usr/include/c++/11/istream /usr/include/c++/11/ios \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \

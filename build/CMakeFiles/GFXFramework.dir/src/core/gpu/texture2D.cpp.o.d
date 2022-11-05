@@ -1,9 +1,8 @@
 CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o: \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/core/gpu/texture2D.cpp \
- /usr/include/stdc-predef.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/core/gpu/texture2D.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/gl_utils.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/deps/api/GL/glew.h \
+ /home/ion/tema1-egc/src/core/gpu/texture2D.cpp \
+ /usr/include/stdc-predef.h /home/ion/tema1-egc/src/core/gpu/texture2D.h \
+ /home/ion/tema1-egc/src/utils/gl_utils.h \
+ /home/ion/tema1-egc/deps/api/GL/glew.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -30,9 +29,10 @@ CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o: \
  /usr/include/c++/11/bits/exception_defines.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
  /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/hash_bytes.h \
- /usr/include/c++/11/new /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/move.h /usr/include/c++/11/type_traits \
- /usr/include/c++/11/iosfwd /usr/include/c++/11/bits/stringfwd.h \
+ /usr/include/c++/11/new /usr/include/c++/11/bits/move.h \
+ /usr/include/c++/11/type_traits \
+ /usr/include/c++/11/bits/nested_exception.h /usr/include/c++/11/iosfwd \
+ /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
  /usr/include/c++/11/cwchar /usr/include/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -157,7 +157,7 @@ CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/deps/api/stb/stb_image.h \
+ /home/ion/tema1-egc/deps/api/stb/stb_image.h \
  /usr/include/c++/11/stdlib.h /usr/include/string.h \
  /usr/include/strings.h /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -181,5 +181,5 @@ CMakeFiles/GFXFramework.dir/src/core/gpu/texture2D.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/deps/api/stb/stb_image_write.h \
- /home/ciubotaruion/MyEGC/Teme/Tema\ 1/src/utils/memory_utils.h
+ /home/ion/tema1-egc/deps/api/stb/stb_image_write.h \
+ /home/ion/tema1-egc/src/utils/memory_utils.h

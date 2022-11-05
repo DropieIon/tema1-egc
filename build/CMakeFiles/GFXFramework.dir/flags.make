@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DDEBUG -DGLM_FORCE_SILENT_WARNINGS -DLIBGFXC_EXPORTS -DSOLVED -DWITH_LAB_M1 -D_CRT_SECURE_NO_WARNINGS
 
-CXX_INCLUDES = -I"/home/ciubotaruion/MyEGC/Teme/Tema 1/deps/api" -I"/home/ciubotaruion/MyEGC/Teme/Tema 1/src"
+CXX_INCLUDES = -I/home/ion/tema1-egc/deps/api -I/home/ion/tema1-egc/src
 
 CXX_FLAGS = -g -fPIE -Wall -Wextra -pedantic -Wno-error -Wno-unused-parameter -Wno-unused-variable -Wno-unused-but-set-variable -Wno-missing-field-initializers -Wno-sign-compare -std=gnu++11
 
