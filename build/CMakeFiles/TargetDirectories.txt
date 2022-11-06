@@ -1,3 +1,0 @@
-/home/ion/tema1-egc/build/CMakeFiles/GFXFramework.dir
-/home/ion/tema1-egc/build/CMakeFiles/edit_cache.dir
-/home/ion/tema1-egc/build/CMakeFiles/rebuild_cache.dir
