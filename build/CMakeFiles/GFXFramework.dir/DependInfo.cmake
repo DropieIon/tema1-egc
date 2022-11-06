@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ion/tema1-egc/src/Tema1/lab3/lab3.cpp" "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o" "gcc" "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o.d"
+  "/home/ion/tema1-egc/src/Tema1/lab3/lab3_vis2D.cpp" "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3_vis2D.cpp.o" "gcc" "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3_vis2D.cpp.o.d"
   "/home/ion/tema1-egc/src/Tema1/lab3/object2D.cpp" "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o" "gcc" "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o.d"
   "/home/ion/tema1-egc/src/components/camera_input.cpp" "CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o" "gcc" "CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o.d"
   "/home/ion/tema1-egc/src/components/scene_input.cpp" "CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o" "gcc" "CMakeFiles/GFXFramework.dir/src/components/scene_input.cpp.o.d"

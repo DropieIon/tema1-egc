@@ -3,44 +3,32 @@
 #include <vector>
 #include <iostream>
 
+
+#include "Tema1/lab3/fereastra-poarta.h"
 #include "Tema1/lab3/transform2D.h"
 #include "Tema1/lab3/object2D.h"
 
 using namespace std;
+using namespace Tema1;
 
 int directie = 1, dir_tx = 1;
 int tx = 150, ty = 250;
 float sx = 2, sy = 2;
 float rad = 50;
-float rad1 = 0, rad2 = M_PI;
+float rad1, rad2;
 int tx1 = 150;
-int dir1 = 1;
+int dir1 = -1;
 
+float bodyX = 200, bodyY = 400;
+float wingX = 80, wingY = 125;
+float rataX = 300, rataY = 300;
+float update_headX, update_headY;
+float angleDuck;
+float headRadius = 50;
+int dir_movement_X = -1, dir_movement_Y = -1;
+float beakX, beakY;
+float wing1X, wing1Y, wing2X, wing2Y;
 
-
-/*
- *  To find out more about `FrameStart`, `Update`, `FrameEnd`
- *  and the order in which they are called, see `world.cpp`.
- */
-
-
-// void drawFilledCircle(GLfloat x, GLfloat y, GLfloat radius){
-// 	int i;
-// 	int triangleAmount = 20; //# of triangles used to draw circle
-	
-// 	//GLfloat radius = 0.8f; //radius
-// 	GLfloat twicePi = 2.0f * M_PI;
-	
-// 	glBegin(GL_TRIANGLE_FAN);
-// 		glVertex2f(x, y); // center of circle
-// 		for(i = 0; i <= triangleAmount;i++) { 
-// 			glVertex2f(
-// 		            x + (radius * cos(i *  twicePi / triangleAmount)), 
-// 			    y + (radius * sin(i * twicePi / triangleAmount))
-// 			);
-// 		}
-// 	glEnd();
-// }
 
 Lab3::Lab3()
 {
@@ -78,6 +66,8 @@ void Lab3::Init()
     // Initialize sx and sy (the scale factors)
     scaleX = 1;
     scaleY = 1;
+    rad1 = M_PI/2.0f;
+    rad2 = - M_PI/2.0f;
 
     // Initialize angularStep
     angularStep = 0;
@@ -95,10 +85,9 @@ void Lab3::Init()
     // Mesh* square4 = object2D::CreateSquare("square4", corner, squareSide, glm::vec3(1, 0, 1));
     // AddMeshToList(square4);
 
-    float bodyX = 200, bodyY = 400;
-    float wingX = 80, wingY = 125;
+
     
-    Mesh* head = object2D::CreateCircle("head", corner, 60, 50, glm::vec3(48/255.0f, 87/255.0f, 55/255.0f));
+    Mesh* head = object2D::CreateCircle("head", corner, 60, headRadius, glm::vec3(48/255.0f, 87/255.0f, 55/255.0f));
     AddMeshToList(head);
 
     Mesh* wing1 = object2D::CreateTriangle("wing1", corner, glm::vec3(wingX*35/100.0f, wingY, 0), glm::vec3(wingX, 0, 0), glm::vec3(88/255.0f, 58/255.0f, 39/255.0f));
@@ -127,14 +116,29 @@ void Lab3::FrameStart()
     glViewport(0, 0, resolution.x, resolution.y);
 }
 
+void Lab3::DrawScene(glm::mat3 visMatrix)
+{
+    modelMatrix = visMatrix * transform2D::Translate(0, 0);
+    RenderMesh2D(meshes["square1"], shaders["VertexColor"], modelMatrix);
+
+    modelMatrix = visMatrix * transform2D::Translate(3, 0);
+    RenderMesh2D(meshes["square1"], shaders["VertexColor"], modelMatrix);
+
+    modelMatrix = visMatrix * transform2D::Translate(1.5, 1.5);
+    RenderMesh2D(meshes["square1"], shaders["VertexColor"], modelMatrix);
+
+    modelMatrix = visMatrix * transform2D::Translate(0, 3);
+    RenderMesh2D(meshes["square1"], shaders["VertexColor"], modelMatrix);
+
+    modelMatrix = visMatrix * transform2D::Translate(3, 3);
+    RenderMesh2D(meshes["square1"], shaders["VertexColor"], modelMatrix);
+}
+
 
 void Lab3::Update(float deltaTimeSeconds)
 {
-    // TODO(student): Update steps for translation, rotation and scale,
-    // in order to create animations. Use the class variables in the
-    // class header, and if you need more of them to complete the task,
-    // add them over there!
 
+    glm::ivec2 resolution = window->GetResolution();
 
     // tx += deltaTimeSeconds *100 * dir_tx;
 
@@ -154,43 +158,81 @@ void Lab3::Update(float deltaTimeSeconds)
     // RenderMesh2D(meshes["circle1"], shaders["VertexColor"], modelMatrix);
 
 
-    sx = 0.65f;
     rad1 += 2*deltaTimeSeconds * dir1;
-    rad2 += 2*deltaTimeSeconds * -dir1;
-    if(rad1 > M_PI/10.0f) {
-        dir1 = -1;
-    }
-    if(rad1 < -M_PI/9.0f)
-        dir1 = 1;
-    modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(425, 385) * transform2D::Scale(sx, sx) * transform2D::Rotate(rad1) * transform2D::Translate(-50, -50);
-    RenderMesh2D(meshes["wing1"], shaders["VertexColor"], modelMatrix);
 
+    rad2 += 2*deltaTimeSeconds * -dir1;
+    rataX += 100*deltaTimeSeconds * dir_movement_X;
+    rataY += 100*deltaTimeSeconds * dir_movement_Y;
+
+
+    if(dir_movement_X == 1 && dir_movement_Y == 1) {
+        //going 45 degrees clockwise
+        angleDuck = M_PI * 315/180.0f; // 315 degrees
+        beakX = update_headX + headRadius * 1.35f;
+        beakY = update_headY + headRadius * 0.3f;
+        wing1X = update_headX;
+        wing1Y = update_headY - headRadius * 2.0f;
+        wing2X = update_headX + headRadius * 0.65f;
+        wing2Y = update_headY - headRadius * 0.45f;
+    }
+    else if(dir_movement_X == -1 && dir_movement_Y == -1) {
+        //going 135 degrees counter-clockwise
+        angleDuck = M_PI * 135/180.0f;
+        beakX = update_headX - headRadius * 0.9f;
+        beakY = update_headY - headRadius * 0.75f;
+        wing1X = update_headX;
+        wing1Y = update_headY + headRadius * 2.0f;
+        wing2X = update_headX - headRadius * 0.65f;
+        wing2Y = update_headY + headRadius * 0.65f;
+    }
+    float cosA = cos(angleDuck), sinA = sin(angleDuck);
+    sx = 0.45f;
+    update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx/1.25f;
+    update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx;
+    if(update_headX > resolution.x || update_headY > resolution.y) {
+        rataX = update_headX;
+        rataY = update_headY;
+        dir_movement_X = -1;
+        dir_movement_Y = -1;
+    }
+    else if(update_headX < 0 || update_headY < 0) {
+        rataX = update_headX;
+        rataY = update_headY;
+        dir_movement_X = 1;
+        dir_movement_Y = 1;
+    }
     
 
+    if(rad1 > M_PI*0.75f)
+        dir1 = -1;
+    if(rad1 < M_PI/2.0) {
+        dir1 = 1;
+    }
     modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(538, 425)* transform2D::Rotate(rad2) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
-    RenderMesh2D(meshes["wing2"], shaders["VertexColor"], modelMatrix);
+    modelMatrix *= transform2D::Rotate(angleDuck);
+    modelMatrix *= transform2D::Translate(-headRadius, -headRadius);
+    // modelMatrix *= transform2D::Translate(385, 470) * transform2D::Rotate(M_PI * 3/2.0f) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
+    
+    RenderMesh2D(meshes["head"], shaders["VertexColor"], transform2D::Translate(update_headX, update_headY) * modelMatrix);
+    RenderMesh2D(meshes["body"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Scale(sx, sx) * modelMatrix);
 
+    // modelMatrix *= transform2D::Translate(500, 300);
+    // modelMatrix *=  transform2D::Translate(-headRadius, -headRadius);
+    
+    // x' = x * cos(C) - y * sin(C)
 
-    modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(500, 300);
-    RenderMesh2D(meshes["head"], shaders["VertexColor"], modelMatrix);
+    // y' = y * cos(C) + x * sin(C)
 
+    RenderMesh2D(meshes["beak"], shaders["VertexColor"], transform2D::Translate(beakX, beakY) * transform2D::Scale(sx, sx) * modelMatrix);
 
+    // modelMatrix *= transform2D::Translate(475, 400) * transform2D::Scale(sx, sx) * transform2D::Rotate(rad1) * transform2D::Translate(-bodyY/2, -bodyY/2);
+    RenderMesh2D(meshes["wing1"], shaders["VertexColor"], transform2D::Translate(wing1X, wing1Y) * transform2D::Rotate(rad1) * transform2D::Scale(sx, sx) * modelMatrix);    
 
-    sx = 0.45f;
-    modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Translate(385, 470) * transform2D::Rotate(M_PI * 3/2.0f) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
-    RenderMesh2D(meshes["body"], shaders["VertexColor"], modelMatrix);
+    RenderMesh2D(meshes["wing2"], shaders["VertexColor"], transform2D::Translate(wing2X, wing2Y) * transform2D::Rotate(rad2) * transform2D::Scale(sx, sx) * modelMatrix);
 
     // modelMatrix = glm::mat3(1);
     // modelMatrix *= transform2D::Translate(500, 500);
-    sx = 0.45f;
-    modelMatrix = glm::mat3(1);
 
-    modelMatrix *= transform2D::Translate(625 , 425) * transform2D::Rotate(M_PI * 3/2.0f) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
-    RenderMesh2D(meshes["beak"], shaders["VertexColor"], modelMatrix);
 
     // sx += deltaTimeSeconds *1 * directie;
     // // cout << sx << " ";

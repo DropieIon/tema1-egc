@@ -153,6 +153,30 @@ src/Tema1/lab3/lab3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GFXFramework.dir/build.make CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.s
 .PHONY : src/Tema1/lab3/lab3.cpp.s
 
+src/Tema1/lab3/lab3_vis2D.o: src/Tema1/lab3/lab3_vis2D.cpp.o
+.PHONY : src/Tema1/lab3/lab3_vis2D.o
+
+# target to build an object file
+src/Tema1/lab3/lab3_vis2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GFXFramework.dir/build.make CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3_vis2D.cpp.o
+.PHONY : src/Tema1/lab3/lab3_vis2D.cpp.o
+
+src/Tema1/lab3/lab3_vis2D.i: src/Tema1/lab3/lab3_vis2D.cpp.i
+.PHONY : src/Tema1/lab3/lab3_vis2D.i
+
+# target to preprocess a source file
+src/Tema1/lab3/lab3_vis2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GFXFramework.dir/build.make CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3_vis2D.cpp.i
+.PHONY : src/Tema1/lab3/lab3_vis2D.cpp.i
+
+src/Tema1/lab3/lab3_vis2D.s: src/Tema1/lab3/lab3_vis2D.cpp.s
+.PHONY : src/Tema1/lab3/lab3_vis2D.s
+
+# target to generate assembly for a file
+src/Tema1/lab3/lab3_vis2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GFXFramework.dir/build.make CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3_vis2D.cpp.s
+.PHONY : src/Tema1/lab3/lab3_vis2D.cpp.s
+
 src/Tema1/lab3/object2D.o: src/Tema1/lab3/object2D.cpp.o
 .PHONY : src/Tema1/lab3/object2D.o
 
@@ -621,6 +645,9 @@ help:
 	@echo "... src/Tema1/lab3/lab3.o"
 	@echo "... src/Tema1/lab3/lab3.i"
 	@echo "... src/Tema1/lab3/lab3.s"
+	@echo "... src/Tema1/lab3/lab3_vis2D.o"
+	@echo "... src/Tema1/lab3/lab3_vis2D.i"
+	@echo "... src/Tema1/lab3/lab3_vis2D.s"
 	@echo "... src/Tema1/lab3/object2D.o"
 	@echo "... src/Tema1/lab3/object2D.i"
 	@echo "... src/Tema1/lab3/object2D.s"

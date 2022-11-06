@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o"
   "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o.d"
+  "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3_vis2D.cpp.o"
+  "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3_vis2D.cpp.o.d"
   "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o"
   "CMakeFiles/GFXFramework.dir/src/Tema1/lab3/object2D.cpp.o.d"
   "CMakeFiles/GFXFramework.dir/src/components/camera_input.cpp.o"

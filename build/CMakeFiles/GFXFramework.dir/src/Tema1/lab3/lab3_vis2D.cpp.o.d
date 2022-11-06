@@ -1,6 +1,7 @@
-CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o: \
- /home/ion/tema1-egc/src/Tema1/lab3/lab3.cpp /usr/include/stdc-predef.h \
- /home/ion/tema1-egc/src/Tema1/lab3/lab3.h \
+CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3_vis2D.cpp.o: \
+ /home/ion/tema1-egc/src/Tema1/lab3/lab3_vis2D.cpp \
+ /usr/include/stdc-predef.h \
+ /home/ion/tema1-egc/src/Tema1/lab3/fereastra-poarta.h \
  /home/ion/tema1-egc/src/components/simple_scene.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -449,6 +450,5 @@ CMakeFiles/GFXFramework.dir/src/Tema1/lab3/lab3.cpp.o: \
  /home/ion/tema1-egc/src/core/managers/texture_manager.h \
  /home/ion/tema1-egc/src/utils/memory_utils.h \
  /usr/include/c++/11/iostream \
- /home/ion/tema1-egc/src/Tema1/lab3/fereastra-poarta.h \
  /home/ion/tema1-egc/src/Tema1/lab3/transform2D.h \
  /home/ion/tema1-egc/src/Tema1/lab3/object2D.h
