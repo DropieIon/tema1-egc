@@ -21,11 +21,11 @@ int dir1 = -1;
 
 float bodyX = 200, bodyY = 400;
 float wingX = 80, wingY = 125;
-float rataX = 300, rataY = 300;
+float rataX = 100, rataY = 300;
 float update_headX, update_headY;
 float angleDuck;
 float headRadius = 50;
-int dir_movement_X = -1, dir_movement_Y = -1;
+int dir_movement_X = -1, dir_movement_Y = 1, prev_dir_X = -1, prev_dir_Y = -1;
 float beakX, beakY;
 float wing1X, wing1Y, wing2X, wing2Y;
 
@@ -158,16 +158,53 @@ void Lab3::Update(float deltaTimeSeconds)
     // RenderMesh2D(meshes["circle1"], shaders["VertexColor"], modelMatrix);
 
 
+
     rad1 += 2*deltaTimeSeconds * dir1;
 
     rad2 += 2*deltaTimeSeconds * -dir1;
     rataX += 100*deltaTimeSeconds * dir_movement_X;
     rataY += 100*deltaTimeSeconds * dir_movement_Y;
 
+    float cosA = cos(angleDuck), sinA = sin(angleDuck);
+    sx = 0.25f;
+    // update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx/1.25f;
+    // update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx;
+    if(update_headX > resolution.x) {
+        // margine dreapta
+        rataX = update_headX;
+        rataY = update_headY;
+        // prev_dir_X = dir_movement_X;
+        // prev_dir_Y = dir_movement_Y;
+        dir_movement_X = -1;
+        // dir_movement_Y = -1;
+    }
+    else if(update_headX < 0) {
+        // margine stanga
+        rataX = update_headX;
+        rataY = update_headY;
+        dir_movement_X = 1;
+        // dir_movement_Y = 1;
+    }
+    else if(update_headY > resolution.y) {
+        // margine sus
+        rataX = update_headX;
+        rataY = update_headY;
+        // dir_movement_X = 1;
+        dir_movement_Y = -1;
+    }
+    else if(update_headY < 0) {
+        // margine jos
+        rataX = update_headX;
+        rataY = update_headY;
+        // dir_movement_X = 1;
+        dir_movement_Y = 1;
+    }
 
     if(dir_movement_X == 1 && dir_movement_Y == 1) {
         //going 45 degrees clockwise
         angleDuck = M_PI * 315/180.0f; // 315 degrees
+        update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx/1.25f;
+        update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx;
         beakX = update_headX + headRadius * 1.35f;
         beakY = update_headY + headRadius * 0.3f;
         wing1X = update_headX;
@@ -178,6 +215,8 @@ void Lab3::Update(float deltaTimeSeconds)
     else if(dir_movement_X == -1 && dir_movement_Y == -1) {
         //going 135 degrees counter-clockwise
         angleDuck = M_PI * 135/180.0f;
+        update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx/1.25f;
+        update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx;
         beakX = update_headX - headRadius * 0.9f;
         beakY = update_headY - headRadius * 0.75f;
         wing1X = update_headX;
@@ -185,22 +224,35 @@ void Lab3::Update(float deltaTimeSeconds)
         wing2X = update_headX - headRadius * 0.65f;
         wing2Y = update_headY + headRadius * 0.65f;
     }
-    float cosA = cos(angleDuck), sinA = sin(angleDuck);
-    sx = 0.45f;
-    update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx/1.25f;
-    update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx;
-    if(update_headX > resolution.x || update_headY > resolution.y) {
-        rataX = update_headX;
-        rataY = update_headY;
-        dir_movement_X = -1;
-        dir_movement_Y = -1;
+    else if(dir_movement_X == -1 && dir_movement_Y == 1) {
+        //going 45 degrees counter-clockwise
+        angleDuck = M_PI * 45/180.0f; // 315 degrees
+        beakX = update_headX - headRadius;
+        beakY = update_headY + headRadius * 1.0f;
+        update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx*1.0f;
+        update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx * 0.75f;
+        wing1X = update_headX + headRadius * 2.15f;
+        wing1Y = update_headY;
+
+
+        wing2X = update_headX + headRadius * 0.7f;
+        wing2Y = update_headY + headRadius * 0.6f;
     }
-    else if(update_headX < 0 || update_headY < 0) {
-        rataX = update_headX;
-        rataY = update_headY;
-        dir_movement_X = 1;
-        dir_movement_Y = 1;
+    else if(dir_movement_X == 1 && dir_movement_Y == -1) {
+        //going 135 degrees clockwise
+        angleDuck = M_PI * 225/180.0f;
+
+
+        update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx*1.0f;
+        update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx*0.75f;
+        beakX = update_headX + headRadius * 0.6f;
+        beakY = update_headY - headRadius * 1.2f;
+        wing1X = update_headX - headRadius * 2.0f;
+        wing1Y = update_headY;
+        wing2X = update_headX - headRadius * 0.7f;
+        wing2Y = update_headY - headRadius * 0.8f;
     }
+    
     
 
     if(rad1 > M_PI*0.75f)
