@@ -19,15 +19,9 @@ float rad1, rad2;
 int tx1 = 150;
 int dir1 = -1;
 
-float bodyX = 200, bodyY = 400;
-float wingX = 80, wingY = 125;
-float rataX = 300, rataY = 300;
-float update_headX, update_headY;
-float angleDuck;
-float headRadius = 50;
-int dir_movement_X = -1, dir_movement_Y = -1;
-float beakX, beakY;
-float wing1X, wing1Y, wing2X, wing2Y;
+
+// float beakX, beakY;
+// float wing1X, wing1Y, wing2X, wing2Y;
 
 
 Lab3::Lab3()
@@ -53,6 +47,9 @@ void Lab3::Init()
     glm::vec3 corner = glm::vec3(100, 100, 0);
 
     float squareSide = 100;
+
+    dir_movement_X = -1;
+    dir_movement_Y = 1;
 
     // TODO(student): Compute coordinates of a square's center, and store
     // then in the `cx` and `cy` class variables (see the header). Use
@@ -99,8 +96,10 @@ void Lab3::Init()
     Mesh* body = object2D::CreateTriangle("body", corner, glm::vec3(bodyX/2.0f, bodyY, 0), glm::vec3(bodyX, 0, 0), glm::vec3(88/255.0f, 58/255.0f, 39/255.0f));
     AddMeshToList(body);
 
-    Mesh* beak = object2D::CreateTriangle("beak", corner, glm::vec3(25, 100, 0), glm::vec3(50, 0, 0), glm::vec3(231/255.0f, 204/255.0f, 57/255.0f));
+    Mesh* beak = object2D::CreateTriangle("beak", corner, glm::vec3(25, 150, 0), glm::vec3(50, 0, 0), glm::vec3(231/255.0f, 204/255.0f, 57/255.0f));
     AddMeshToList(beak);
+
+    hitbox1 = corner, hitbox2 = corner + glm::vec3(bodyX, bodyY, 0);
 
 }
 
@@ -156,51 +155,96 @@ void Lab3::Update(float deltaTimeSeconds)
     // Remember, the last matrix in the chain will take effect first!
 
     // RenderMesh2D(meshes["circle1"], shaders["VertexColor"], modelMatrix);
-
-
+    sx = 0.25f;
     rad1 += 2*deltaTimeSeconds * dir1;
-
     rad2 += 2*deltaTimeSeconds * -dir1;
-    rataX += 100*deltaTimeSeconds * dir_movement_X;
-    rataY += 100*deltaTimeSeconds * dir_movement_Y;
+    rataX += speed *deltaTimeSeconds * dir_movement_X;
+    rataY += speed * deltaTimeSeconds * dir_movement_Y;
 
+  if(head_position_X > resolution.x) {
+        // margine dreapta
+        // rataX = update_headX;
+        // rataY = update_headY;
+        // prev_dir_X = dir_movement_X;
+        // prev_dir_Y = dir_movement_Y;
+        dir_movement_X = -1;
+        // dir_movement_Y = -1;
+    }
+    else if(head_position_X < 0) {
+        // margine stanga
+        // rataX = update_headX;
+        // rataY = update_headY;
+        dir_movement_X = 1;
+        // dir_movement_Y = 1;
+    }
+    else if(head_position_Y > resolution.y) {
+        // margine sus
+        // rataX = update_headX;
+        // rataY = update_headY;
+        // dir_movement_X = 1;
+        dir_movement_Y = -1;
+    }
+    else if(head_position_Y < 0) {
+        // margine jos
+        // rataX = update_headX;
+        // rataY = update_headY;
+        // dir_movement_X = 1;
+        dir_movement_Y = 1;
+    }
 
     if(dir_movement_X == 1 && dir_movement_Y == 1) {
         //going 45 degrees clockwise
         angleDuck = M_PI * 315/180.0f; // 315 degrees
-        beakX = update_headX + headRadius * 1.35f;
-        beakY = update_headY + headRadius * 0.3f;
-        wing1X = update_headX;
-        wing1Y = update_headY - headRadius * 2.0f;
-        wing2X = update_headX + headRadius * 0.65f;
-        wing2Y = update_headY - headRadius * 0.45f;
+        // update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx/1.25f;
+        // update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx;
+        // beakX = update_headX + headRadius * 1.35f;
+        // beakY = update_headY + headRadius * 0.3f;
+        // wing1X = update_headX;
+        // wing1Y = update_headY - headRadius * 2.0f;
+        // wing2X = update_headX + headRadius * 0.65f;
+        // wing2Y = update_headY - headRadius * 0.45f;
     }
     else if(dir_movement_X == -1 && dir_movement_Y == -1) {
         //going 135 degrees counter-clockwise
         angleDuck = M_PI * 135/180.0f;
-        beakX = update_headX - headRadius * 0.9f;
-        beakY = update_headY - headRadius * 0.75f;
-        wing1X = update_headX;
-        wing1Y = update_headY + headRadius * 2.0f;
-        wing2X = update_headX - headRadius * 0.65f;
-        wing2Y = update_headY + headRadius * 0.65f;
+        // update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx/1.25f;
+        // update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx;
+        // beakX = update_headX - headRadius * 0.9f;
+        // beakY = update_headY - headRadius * 0.75f;
+        // wing1X = update_headX;
+        // wing1Y = update_headY + headRadius * 2.0f;
+        // wing2X = update_headX - headRadius * 0.65f;
+        // wing2Y = update_headY + headRadius * 0.65f;
     }
-    float cosA = cos(angleDuck), sinA = sin(angleDuck);
-    sx = 0.45f;
-    update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx/1.25f;
-    update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx;
-    if(update_headX > resolution.x || update_headY > resolution.y) {
-        rataX = update_headX;
-        rataY = update_headY;
-        dir_movement_X = -1;
-        dir_movement_Y = -1;
+    else if(dir_movement_X == -1 && dir_movement_Y == 1) {
+        //going 45 degrees counter-clockwise
+        angleDuck = M_PI * 45/180.0f; // 45 degrees
+        // beakX = update_headX - headRadius;
+        // beakY = update_headY + headRadius * 1.0f;
+        // update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx*1.0f;
+        // update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx * 0.75f;
+        // wing1X = update_headX + headRadius * 2.15f;
+        // wing1Y = update_headY;
+
+
+        // wing2X = update_headX + headRadius * 0.7f;
+        // wing2Y = update_headY + headRadius * 0.6f;
     }
-    else if(update_headX < 0 || update_headY < 0) {
-        rataX = update_headX;
-        rataY = update_headY;
-        dir_movement_X = 1;
-        dir_movement_Y = 1;
+    else if(dir_movement_X == 1 && dir_movement_Y == -1) {
+        //going 135 degrees clockwise
+        angleDuck = M_PI * 225/180.0f;
+
+
+        // update_headX = rataX + (bodyX/2.0f * cosA - bodyY*sinA) * sx*1.0f;
+        // update_headY = rataY + (bodyY*cosA + bodyX/2.0f*sinA) * sx*0.75f;
+        // beakX = update_headX + headRadius * 0.6f;
+        // beakY = update_headY - headRadius * 1.2f;
+        // wing1X = update_headX - headRadius * 2.0f;
+        // wing1Y = update_headY;
+        // wing2X = update_headX - headRadius * 0.7f;
+        // wing2Y = update_headY - headRadius * 0.8f;
     }
+    // cout << dir_movement_X << " " << dir_movement_Y << endl;
     
 
     if(rad1 > M_PI*0.75f)
@@ -209,12 +253,18 @@ void Lab3::Update(float deltaTimeSeconds)
         dir1 = 1;
     }
     modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Rotate(angleDuck);
+    modelMatrix *= transform2D::Scale(sx, sx);
     modelMatrix *= transform2D::Translate(-headRadius, -headRadius);
+    glm::mat3 head_pos = transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate(bodyX/2.0f * sx, bodyY* sx) * modelMatrix;
+    glm::mat3 body_starting_pos = transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * modelMatrix;
+    head_position_X = head_pos[2][0], head_position_Y = head_pos[2][1];
+    body_starting_pos_X = body_starting_pos[2][0], body_starting_pos_Y = body_starting_pos[2][1];
+    hitbox1 = (transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate(100, 100) * modelMatrix)[2];
+    hitbox2 = (transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate(100 + bodyX, 100 + bodyY) * modelMatrix)[2];
+
     // modelMatrix *= transform2D::Translate(385, 470) * transform2D::Rotate(M_PI * 3/2.0f) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
-    
-    RenderMesh2D(meshes["head"], shaders["VertexColor"], transform2D::Translate(update_headX, update_headY) * modelMatrix);
-    RenderMesh2D(meshes["body"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Scale(sx, sx) * modelMatrix);
+    RenderMesh2D(meshes["head"], shaders["VertexColor"], head_pos);
+    RenderMesh2D(meshes["body"], shaders["VertexColor"], body_starting_pos);
 
     // modelMatrix *= transform2D::Translate(500, 300);
     // modelMatrix *=  transform2D::Translate(-headRadius, -headRadius);
@@ -223,12 +273,41 @@ void Lab3::Update(float deltaTimeSeconds)
 
     // y' = y * cos(C) + x * sin(C)
 
-    RenderMesh2D(meshes["beak"], shaders["VertexColor"], transform2D::Translate(beakX, beakY) * transform2D::Scale(sx, sx) * modelMatrix);
-
+    RenderMesh2D(meshes["beak"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) *transform2D::Translate((bodyX/2.0f +  headRadius / 3.0f)* sx, (bodyY + headRadius / 3.0f) * sx) * modelMatrix);
     // modelMatrix *= transform2D::Translate(475, 400) * transform2D::Scale(sx, sx) * transform2D::Rotate(rad1) * transform2D::Translate(-bodyY/2, -bodyY/2);
-    RenderMesh2D(meshes["wing1"], shaders["VertexColor"], transform2D::Translate(wing1X, wing1Y) * transform2D::Rotate(rad1) * transform2D::Scale(sx, sx) * modelMatrix);    
 
-    RenderMesh2D(meshes["wing2"], shaders["VertexColor"], transform2D::Translate(wing2X, wing2Y) * transform2D::Rotate(rad2) * transform2D::Scale(sx, sx) * modelMatrix);
+    RenderMesh2D(meshes["wing1"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate((bodyX/2.0f - headRadius / 14.0f)* sx, (bodyY - headRadius *2.5f) * sx) * transform2D::Rotate(rad1)* modelMatrix);    
+    RenderMesh2D(meshes["wing2"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate((bodyX/2.0f +  headRadius / 3.0f)* sx, (bodyY - headRadius *1.7f) * sx) * transform2D::Rotate(rad2) * modelMatrix);
+
+    
+
+    // if(rad1 > M_PI*0.75f)
+    //     dir1 = -1;
+    // if(rad1 < M_PI/2.0) {
+    //     dir1 = 1;
+    // }
+    // modelMatrix = glm::mat3(1);
+    // modelMatrix *= transform2D::Scale(sx, sx);
+    // modelMatrix *= transform2D::Translate(-headRadius, -headRadius);
+
+    // // modelMatrix *= transform2D::Translate(385, 470) * transform2D::Rotate(M_PI * 3/2.0f) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
+    // RenderMesh2D(meshes["head"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate(bodyX/2.0f * sx, bodyY* sx) * modelMatrix);
+    // RenderMesh2D(meshes["body"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * modelMatrix);
+
+    // // modelMatrix *= transform2D::Translate(500, 300);
+    // // modelMatrix *=  transform2D::Translate(-headRadius, -headRadius);
+    
+    // // x' = x * cos(C) - y * sin(C)
+
+    // // y' = y * cos(C) + x * sin(C)
+
+    // RenderMesh2D(meshes["beak"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) *transform2D::Translate((bodyX/2.0f +  headRadius / 3.0f)* sx, (bodyY + headRadius / 3.0f) * sx) * modelMatrix);
+    // // modelMatrix *= transform2D::Translate(475, 400) * transform2D::Scale(sx, sx) * transform2D::Rotate(rad1) * transform2D::Translate(-bodyY/2, -bodyY/2);
+
+    // RenderMesh2D(meshes["wing1"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate((bodyX/2.0f - headRadius / 3.0f)* sx, (bodyY - headRadius *2.5f) * sx) * transform2D::Rotate(rad1)* modelMatrix);    
+    // RenderMesh2D(meshes["wing2"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate((bodyX/2.0f +  headRadius / 3.0f)* sx, (bodyY - headRadius *1.7f) * sx) * transform2D::Rotate(rad2) * modelMatrix);
+
+    
 
     // modelMatrix = glm::mat3(1);
     // modelMatrix *= transform2D::Translate(500, 500);
@@ -319,6 +398,42 @@ void Lab3::OnMouseMove(int mouseX, int mouseY, int deltaX, int deltaY)
 
 void Lab3::OnMouseBtnPress(int mouseX, int mouseY, int button, int mods)
 {
+    // cout << "Start: " << head_position_X << " " << body_starting_pos_X << endl;
+    glm::ivec2 resolution = window->GetResolution();
+    int actual_pos_mouse_Y = resolution.y - mouseY;
+    // ray-casting algorithm
+    int crossing_detected = 0;
+        if(actual_pos_mouse_Y < hitbox2[1] && actual_pos_mouse_Y >= hitbox1[1]) {
+            int x0 = hitbox1[0] + (actual_pos_mouse_Y - hitbox1[1]) / (hitbox2[1] - hitbox1[1]) * (hitbox2[0] - hitbox1[0]); // crossing point (x0,y)
+            if(x0 > mouseX)
+                crossing_detected++;
+        }
+    // else if(dir_movement_X == -1 && dir_movement_Y == 1) {
+    //     if(actual_pos_mouse_Y < hitbox2[1] && actual_pos_mouse_Y >= hitbox1[1]) {
+    //         int x0 = hitbox1[0] + (actual_pos_mouse_Y - hitbox1[1]) / (hitbox2[1] - hitbox1[1]) * (hitbox1[0] - hitbox2[0]); // crossing point (x0,y)
+    //         if(x0 > mouseX)
+    //             crossing_detected++;
+    //     }
+    // }
+    // else if(dir_movement_X == 1 && dir_movement_Y == -1) {
+    //     if(actual_pos_mouse_Y < hitbox1[1] && actual_pos_mouse_Y >= hitbox2[1]) {
+    //         int x0 = hitbox1[0] + (actual_pos_mouse_Y - hitbox1[1]) / (hitbox1[1] - hitbox2[1]) * (hitbox2[0] - hitbox1[0]); // crossing point (x0,y)
+    //         if(x0 > mouseX)
+    //             crossing_detected++;
+    //     }
+    // }
+    // else if(dir_movement_X == -1 && dir_movement_Y == -1) {
+    //     if(actual_pos_mouse_Y < hitbox1[1] && actual_pos_mouse_Y >= hitbox2[1]) {
+    //         int x0 = hitbox2[0] + (actual_pos_mouse_Y - hitbox2[1]) / (hitbox1[1] - hitbox2[1]) * (hitbox1[0] - hitbox2[0]); // crossing point (x0,y)
+    //         if(x0 > mouseX)
+    //             crossing_detected++;
+    //     }
+    // }
+    if(crossing_detected %2 == 1) {
+        cout << "merge" << endl;
+    }
+    
+    
     // Add mouse button press event
 }
 
