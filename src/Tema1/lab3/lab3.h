@@ -1,6 +1,7 @@
 #pragma once
 
 #include "components/simple_scene.h"
+#include <time.h>
 
 class Lab3 : public gfxc::SimpleScene
 {
@@ -49,6 +50,7 @@ private:
    glm::mat3 VisualizationTransf2DUnif(const LogicSpace &logicSpace, const ViewportSpace &viewSpace);
    void DrawScene(glm::mat3 visMatrix);
    void SetViewportArea(const ViewportSpace &viewSpace, glm::vec3 colorColor = glm::vec3(0), bool clear = true);
+   bool isPtInRectangle(int point_x, int point_y, int point1_x, int point1_y, int point2_x, int point2_y);
    
 
 protected:
@@ -69,10 +71,18 @@ protected:
    float wing_speed = 1;
    float headRadius = 100;
    int dir_movement_X = -1, dir_movement_Y = -1;
-   float speed = 300;
+   float speed = 300, speed_save = speed;
+   float sx, rad1, rad2, dir_wings = 1;
    int head_position_X, head_position_Y;
    int body_starting_pos_X, body_starting_pos_Y;
    glm::vec3 hitbox1, hitbox2;
    bool isDead, hasEscaped;
-
+   time_t time_since_alive;
+   time_t start;
+   int nr_of_lives = 3;
+   int nr_of_bullets = 3;
+   int nr_of_points = 100;
+   int score = 0;
+   float acceleration_factor = speed / 2.0f;
+   int many_dead_ducks = 0;
 };
