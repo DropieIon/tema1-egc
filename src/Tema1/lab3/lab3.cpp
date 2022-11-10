@@ -48,8 +48,7 @@ void Lab3::Init()
 
     float squareSide = 100;
 
-    dir_movement_X = -1;
-    dir_movement_Y = 1;
+    isDead = false;
 
     // TODO(student): Compute coordinates of a square's center, and store
     // then in the `cx` and `cy` class variables (see the header). Use
@@ -156,10 +155,24 @@ void Lab3::Update(float deltaTimeSeconds)
 
     // RenderMesh2D(meshes["circle1"], shaders["VertexColor"], modelMatrix);
     sx = 0.25f;
-    rad1 += 2*deltaTimeSeconds * dir1;
-    rad2 += 2*deltaTimeSeconds * -dir1;
+    rad1 += 2*deltaTimeSeconds * dir1 * wing_speed;
+    rad2 += 2*deltaTimeSeconds * -dir1 * wing_speed;
     rataX += speed *deltaTimeSeconds * dir_movement_X;
     rataY += speed * deltaTimeSeconds * dir_movement_Y;
+
+
+    if(isDead && head_position_Y < 0) {
+        isDead = false;
+        rataX = rand() % resolution.x;
+        rataY = rand() % resolution.y;
+        do {
+            dir_movement_X = rand() % 3 - 1;
+        } while(dir_movement_X == 0);
+        do {
+        dir_movement_Y = rand() % 3 - 1;
+        } while(dir_movement_Y == 0);
+        wing_speed = 1;
+    }
 
   if(head_position_X > resolution.x) {
         // margine dreapta
@@ -191,6 +204,9 @@ void Lab3::Update(float deltaTimeSeconds)
         // dir_movement_X = 1;
         dir_movement_Y = 1;
     }
+
+    // dir_movement_X = -1;
+    // dir_movement_Y = -1;
 
     if(dir_movement_X == 1 && dir_movement_Y == 1) {
         //going 45 degrees clockwise
@@ -244,6 +260,10 @@ void Lab3::Update(float deltaTimeSeconds)
         // wing2X = update_headX - headRadius * 0.7f;
         // wing2Y = update_headY - headRadius * 0.8f;
     }
+    else if(isDead) {
+        // going 180 degrees
+        angleDuck = M_PI;
+    }
     // cout << dir_movement_X << " " << dir_movement_Y << endl;
     
 
@@ -259,9 +279,6 @@ void Lab3::Update(float deltaTimeSeconds)
     glm::mat3 body_starting_pos = transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * modelMatrix;
     head_position_X = head_pos[2][0], head_position_Y = head_pos[2][1];
     body_starting_pos_X = body_starting_pos[2][0], body_starting_pos_Y = body_starting_pos[2][1];
-    hitbox1 = (transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate(100, 100) * modelMatrix)[2];
-    hitbox2 = (transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate(100 + bodyX, 100 + bodyY) * modelMatrix)[2];
-
     // modelMatrix *= transform2D::Translate(385, 470) * transform2D::Rotate(M_PI * 3/2.0f) * transform2D::Scale(sx, sx) * transform2D::Translate(-50, -50);
     RenderMesh2D(meshes["head"], shaders["VertexColor"], head_pos);
     RenderMesh2D(meshes["body"], shaders["VertexColor"], body_starting_pos);
@@ -395,6 +412,14 @@ void Lab3::OnMouseMove(int mouseX, int mouseY, int deltaX, int deltaY)
     // Add mouse move event
 }
 
+bool isPtInRectangle(int point_x, int point_y, int point1_x, int point1_y, int point2_x, int point2_y) {
+    // point 1 > point 2
+    cout << point_x << " " << point_y << " " << point1_x << " " << point1_y << " " << point2_x << " " << point2_y << endl;
+    if(point_x < point2_x && point_x > point1_x && point_y < point2_y && point_y > point1_y)
+        return true;
+    return false;
+}
+
 
 void Lab3::OnMouseBtnPress(int mouseX, int mouseY, int button, int mods)
 {
@@ -403,34 +428,39 @@ void Lab3::OnMouseBtnPress(int mouseX, int mouseY, int button, int mods)
     int actual_pos_mouse_Y = resolution.y - mouseY;
     // ray-casting algorithm
     int crossing_detected = 0;
-        if(actual_pos_mouse_Y < hitbox2[1] && actual_pos_mouse_Y >= hitbox1[1]) {
-            int x0 = hitbox1[0] + (actual_pos_mouse_Y - hitbox1[1]) / (hitbox2[1] - hitbox1[1]) * (hitbox2[0] - hitbox1[0]); // crossing point (x0,y)
-            if(x0 > mouseX)
-                crossing_detected++;
+    if(dir_movement_X == 1 && dir_movement_Y == 1) {
+        if(isPtInRectangle(mouseX, actual_pos_mouse_Y, body_starting_pos_X, body_starting_pos_Y, head_position_X, head_position_Y)) {
+            isDead = true;
         }
-    // else if(dir_movement_X == -1 && dir_movement_Y == 1) {
-    //     if(actual_pos_mouse_Y < hitbox2[1] && actual_pos_mouse_Y >= hitbox1[1]) {
-    //         int x0 = hitbox1[0] + (actual_pos_mouse_Y - hitbox1[1]) / (hitbox2[1] - hitbox1[1]) * (hitbox1[0] - hitbox2[0]); // crossing point (x0,y)
-    //         if(x0 > mouseX)
-    //             crossing_detected++;
-    //     }
-    // }
-    // else if(dir_movement_X == 1 && dir_movement_Y == -1) {
-    //     if(actual_pos_mouse_Y < hitbox1[1] && actual_pos_mouse_Y >= hitbox2[1]) {
-    //         int x0 = hitbox1[0] + (actual_pos_mouse_Y - hitbox1[1]) / (hitbox1[1] - hitbox2[1]) * (hitbox2[0] - hitbox1[0]); // crossing point (x0,y)
-    //         if(x0 > mouseX)
-    //             crossing_detected++;
-    //     }
-    // }
-    // else if(dir_movement_X == -1 && dir_movement_Y == -1) {
-    //     if(actual_pos_mouse_Y < hitbox1[1] && actual_pos_mouse_Y >= hitbox2[1]) {
-    //         int x0 = hitbox2[0] + (actual_pos_mouse_Y - hitbox2[1]) / (hitbox1[1] - hitbox2[1]) * (hitbox1[0] - hitbox2[0]); // crossing point (x0,y)
-    //         if(x0 > mouseX)
-    //             crossing_detected++;
-    //     }
-    // }
-    if(crossing_detected %2 == 1) {
-        cout << "merge" << endl;
+    }
+    else if(dir_movement_X == -1 && dir_movement_Y == 1) {
+
+        if(isPtInRectangle(mouseX, actual_pos_mouse_Y, head_position_X, body_starting_pos_Y, body_starting_pos_X, head_position_Y)) {
+            isDead = true;
+        }
+        
+    }
+    else if(dir_movement_X == 1 && dir_movement_Y == -1) {
+        
+        if(isPtInRectangle(mouseX, actual_pos_mouse_Y, body_starting_pos_X, head_position_Y, head_position_X, body_starting_pos_Y)) {
+            isDead = true;
+        }
+
+    }
+    else if(dir_movement_X == -1 && dir_movement_Y == -1) {
+        
+        if(isPtInRectangle(mouseX, actual_pos_mouse_Y, head_position_X, head_position_Y, body_starting_pos_X, body_starting_pos_Y)) {
+            isDead = true;
+        }
+
+    }
+
+    if(isDead)
+    {
+        dir_movement_X = 0;
+        dir_movement_Y = -1;
+        wing_speed = 0;
+
     }
     
     

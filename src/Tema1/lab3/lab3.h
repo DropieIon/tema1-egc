@@ -49,6 +49,7 @@ private:
    glm::mat3 VisualizationTransf2DUnif(const LogicSpace &logicSpace, const ViewportSpace &viewSpace);
    void DrawScene(glm::mat3 visMatrix);
    void SetViewportArea(const ViewportSpace &viewSpace, glm::vec3 colorColor = glm::vec3(0), bool clear = true);
+   
 
 protected:
    float cx, cy;
@@ -65,11 +66,13 @@ protected:
    float rataX = 200, rataY = 300;
    float update_headX, update_headY;
    float angleDuck;
+   float wing_speed = 1;
    float headRadius = 100;
-   int dir_movement_X = -1, dir_movement_Y = 1;
+   int dir_movement_X = -1, dir_movement_Y = -1;
    float speed = 300;
    int head_position_X, head_position_Y;
    int body_starting_pos_X, body_starting_pos_Y;
    glm::vec3 hitbox1, hitbox2;
+   bool isDead, hasEscaped;
 
 };
