@@ -1,13 +1,12 @@
 #pragma once
 
 #include "components/simple_scene.h"
-#include <time.h>
 
-class Lab3 : public gfxc::SimpleScene
+class Game : public gfxc::SimpleScene
 {
 public:
-   Lab3();
-   ~Lab3();
+   Game();
+   ~Game();
 
    void Init() override;
 
@@ -24,7 +23,7 @@ private:
    void OnMouseBtnRelease(int mouseX, int mouseY, int button, int mods) override;
    void OnMouseScroll(int mouseX, int mouseY, int offsetX, int offsetY) override;
    void OnWindowResize(int width, int height) override;
-   void DrawScene();
+   void DrawDuck();
    void DrawUI(glm::ivec2 &resolution);
    bool isPtInRectangle(int point_x, int point_y, int point1_x, int point1_y, int point2_x, int point2_y);
    void ComputeConditions(glm::ivec2 &resolution);

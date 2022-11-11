@@ -4,7 +4,7 @@
 #include "core/engine.h"
 #include "components/simple_scene.h"
 
-#include "Tema1/lab3/lab3.h"
+#include "Tema1/Game.h"
 // #include "Tema1/lab3/lab3_vis2D.h"
 
 #ifdef _WIN32
@@ -34,7 +34,7 @@ int main(int argc, char **argv)
     (void)Engine::Init(wp);
 
     // Create a new 3D world and start running it
-    World *world = new Lab3();
+    World *world = new Game();
 
     world->Init();
     world->Run();

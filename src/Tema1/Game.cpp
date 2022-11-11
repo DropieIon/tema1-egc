@@ -1,27 +1,20 @@
-#include "Tema1/lab3/lab3.h"
+#include "Tema1/Game.h"
 
 #include <vector>
 #include <iostream>
 
+#include "Tema1/transform2D.h"
+#include "Tema1/object2D.h"
 
-#include "Tema1/lab3/fereastra-poarta.h"
-#include "Tema1/lab3/transform2D.h"
-#include "Tema1/lab3/object2D.h"
-
-using namespace std;
-using namespace Tema1;
-
-Lab3::Lab3()
+Game::Game()
 {
 }
 
-
-Lab3::~Lab3()
+Game::~Game()
 {
 }
 
-
-void Lab3::Init()
+void Game::Init()
 {
     glm::ivec2 resolution = window->GetResolution();
     auto camera = GetSceneCamera();
@@ -83,7 +76,7 @@ void Lab3::Init()
 }
 
 
-void Lab3::FrameStart()
+void Game::FrameStart()
 {
     glClearColor(gameRefreshColor[0], gameRefreshColor[1], gameRefreshColor[2], 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -92,7 +85,21 @@ void Lab3::FrameStart()
     glViewport(0, 0, resolution.x, resolution.y);
 }
 
-void Lab3::DrawUI(glm::ivec2 &resolution) {
+void Game::DrawDuck() {
+    glm::mat3 head_pos = transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate(bodyX/2.0f * sx, bodyY* sx) * modelMatrix;
+    glm::mat3 body_starting_pos = transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * modelMatrix;
+    head_position_X = head_pos[2][0], head_position_Y = head_pos[2][1];
+    body_starting_pos_X = body_starting_pos[2][0], body_starting_pos_Y = body_starting_pos[2][1];
+
+    RenderMesh2D(meshes["head"], shaders["VertexColor"], head_pos);
+    RenderMesh2D(meshes["body"], shaders["VertexColor"], body_starting_pos);
+    RenderMesh2D(meshes["beak"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) *transform2D::Translate((bodyX/2.0f +  headRadius / 3.0f)* sx, (bodyY + headRadius / 3.0f) * sx) * modelMatrix);
+
+    RenderMesh2D(meshes["wing1"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate((bodyX/2.0f - headRadius / 14.0f)* sx, (bodyY - headRadius *2.5f) * sx) * transform2D::Rotate(rad1)* modelMatrix);    
+    RenderMesh2D(meshes["wing2"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate((bodyX/2.0f +  headRadius / 3.0f)* sx, (bodyY - headRadius *1.7f) * sx) * transform2D::Rotate(rad2) * modelMatrix);
+}
+
+void Game::DrawUI(glm::ivec2 &resolution) {
 
     for(int i = 0; i < nr_of_lives; i++) {
         RenderMesh2D(meshes["life" + i], shaders["VertexColor"], transform2D::Translate(resolution.x - headRadius * (1.5f + i * 0.5f), resolution.y - headRadius * 1.3f) * glm::mat3(1));
@@ -107,22 +114,9 @@ void Lab3::DrawUI(glm::ivec2 &resolution) {
     RenderMesh2D(meshes["score" + (score > nr_of_points ? nr_of_points : score)], shaders["VertexColor"], transform2D::Translate(resolution.x - headRadius * 2.6f, resolution.y - headRadius * 2.0f) * glm::mat3(1));
 }
 
-void Lab3::DrawScene()
-{
-    glm::mat3 head_pos = transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate(bodyX/2.0f * sx, bodyY* sx) * modelMatrix;
-    glm::mat3 body_starting_pos = transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * modelMatrix;
-    head_position_X = head_pos[2][0], head_position_Y = head_pos[2][1];
-    body_starting_pos_X = body_starting_pos[2][0], body_starting_pos_Y = body_starting_pos[2][1];
 
-    RenderMesh2D(meshes["head"], shaders["VertexColor"], head_pos);
-    RenderMesh2D(meshes["body"], shaders["VertexColor"], body_starting_pos);
-    RenderMesh2D(meshes["beak"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) *transform2D::Translate((bodyX/2.0f +  headRadius / 3.0f)* sx, (bodyY + headRadius / 3.0f) * sx) * modelMatrix);
 
-    RenderMesh2D(meshes["wing1"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate((bodyX/2.0f - headRadius / 14.0f)* sx, (bodyY - headRadius *2.5f) * sx) * transform2D::Rotate(rad1)* modelMatrix);    
-    RenderMesh2D(meshes["wing2"], shaders["VertexColor"], transform2D::Translate(rataX, rataY) * transform2D::Rotate(angleDuck) * transform2D::Translate((bodyX/2.0f +  headRadius / 3.0f)* sx, (bodyY - headRadius *1.7f) * sx) * transform2D::Rotate(rad2) * modelMatrix);
-}
-
-void Lab3::ComputeConditions(glm::ivec2 &resolution) {
+void Game::ComputeConditions(glm::ivec2 &resolution) {
     if(gameOver) {
         speed = 0;
         acceleration_factor = 0;
@@ -226,55 +220,31 @@ void Lab3::ComputeConditions(glm::ivec2 &resolution) {
     }
 }
 
-
-void Lab3::Update(float deltaTimeSeconds)
-{
-
-    glm::ivec2 resolution = window->GetResolution();
-    rad1 += 2*deltaTimeSeconds * dir_wings * wing_speed;
-    rad2 += 2*deltaTimeSeconds * -dir_wings * wing_speed;
-    rataX += (speed + acceleration_factor * many_dead_ducks) *deltaTimeSeconds * dir_movement_X;
-    rataY += (speed + acceleration_factor * many_dead_ducks) * deltaTimeSeconds * dir_movement_Y;
-    time_since_alive = time(NULL) - start;
-
-    ComputeConditions(resolution);
-
-    modelMatrix = glm::mat3(1);
-    modelMatrix *= transform2D::Scale(sx, sx);
-    modelMatrix *= transform2D::Translate(-headRadius, -headRadius);
-
-    DrawUI(resolution);
-
-    DrawScene();
-
-}
-
-
-void Lab3::FrameEnd()
+void Game::FrameEnd()
 {
 }
 
 
-void Lab3::OnInputUpdate(float deltaTime, int mods)
+void Game::OnInputUpdate(float deltaTime, int mods)
 {
 }
 
 
-void Lab3::OnKeyPress(int key, int mods)
+void Game::OnKeyPress(int key, int mods)
 {
 }
 
 
-void Lab3::OnKeyRelease(int key, int mods)
+void Game::OnKeyRelease(int key, int mods)
 {
 }
 
 
-void Lab3::OnMouseMove(int mouseX, int mouseY, int deltaX, int deltaY)
+void Game::OnMouseMove(int mouseX, int mouseY, int deltaX, int deltaY)
 {
 }
 
-bool Lab3::isPtInRectangle(int point_x, int point_y, int point1_x, int point1_y, int point2_x, int point2_y) {
+bool Game::isPtInRectangle(int point_x, int point_y, int point1_x, int point1_y, int point2_x, int point2_y) {
     // point 1 > point 2
     point1_x -= headRadius / 2.0f;
     point1_y -= headRadius / 2.0f;
@@ -286,7 +256,7 @@ bool Lab3::isPtInRectangle(int point_x, int point_y, int point1_x, int point1_y,
 }
 
 
-void Lab3::OnMouseBtnPress(int mouseX, int mouseY, int button, int mods)
+void Game::OnMouseBtnPress(int mouseX, int mouseY, int button, int mods)
 {
     glm::ivec2 resolution = window->GetResolution();
     int actual_pos_mouse_Y = resolution.y - mouseY;
@@ -329,16 +299,16 @@ void Lab3::OnMouseBtnPress(int mouseX, int mouseY, int button, int mods)
 }
 
 
-void Lab3::OnMouseBtnRelease(int mouseX, int mouseY, int button, int mods)
+void Game::OnMouseBtnRelease(int mouseX, int mouseY, int button, int mods)
 {
 }
 
 
-void Lab3::OnMouseScroll(int mouseX, int mouseY, int offsetX, int offsetY)
+void Game::OnMouseScroll(int mouseX, int mouseY, int offsetX, int offsetY)
 {
 }
 
 
-void Lab3::OnWindowResize(int width, int height)
+void Game::OnWindowResize(int width, int height)
 {
 }
