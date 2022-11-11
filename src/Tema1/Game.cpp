@@ -177,6 +177,7 @@ void Game::ComputeConditions(glm::ivec2 &resolution) {
         nr_of_lives -= 1;
         if(nr_of_lives == 0)
             gameOver = true;
+        else nr_of_bullets += 1;
     }
 
   if(head_position_X > resolution.x) {
@@ -294,7 +295,7 @@ void Game::OnMouseBtnPress(int mouseX, int mouseY, int button, int mods)
 
     nr_of_bullets -= 1;
     if(!isDead && nr_of_bullets == 0) {
-        gameOver = true;
+        hasEscaped = true;
     }
 }
 
