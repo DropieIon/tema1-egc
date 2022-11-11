@@ -6,27 +6,6 @@
 class Lab3 : public gfxc::SimpleScene
 {
 public:
-   struct ViewportSpace
-    {
-      ViewportSpace() : x(0), y(0), width(1), height(1) {}
-      ViewportSpace(int x, int y, int width, int height)
-          : x(x), y(y), width(width), height(height) {}
-      int x;
-      int y;
-      int width;
-      int height;
-    };
-
-    struct LogicSpace
-    {
-      LogicSpace() : x(0), y(0), width(1), height(1) {}
-      LogicSpace(float x, float y, float width, float height)
-          : x(x), y(y), width(width), height(height) {}
-      float x;
-      float y;
-      float width;
-      float height;
-    };
    Lab3();
    ~Lab3();
 
@@ -45,24 +24,13 @@ private:
    void OnMouseBtnRelease(int mouseX, int mouseY, int button, int mods) override;
    void OnMouseScroll(int mouseX, int mouseY, int offsetX, int offsetY) override;
    void OnWindowResize(int width, int height) override;
-
-   glm::mat3 VisualizationTransf2D(const LogicSpace &logicSpace, const ViewportSpace &viewSpace);
-   glm::mat3 VisualizationTransf2DUnif(const LogicSpace &logicSpace, const ViewportSpace &viewSpace);
-   void DrawScene(glm::mat3 visMatrix);
-   void SetViewportArea(const ViewportSpace &viewSpace, glm::vec3 colorColor = glm::vec3(0), bool clear = true);
+   void DrawScene();
+   void DrawUI(glm::ivec2 &resolution);
    bool isPtInRectangle(int point_x, int point_y, int point1_x, int point1_y, int point2_x, int point2_y);
-   
+   void ComputeConditions(glm::ivec2 &resolution);
 
 protected:
-   float cx, cy;
-   float translateX, translateY;
-   float scaleX, scaleY;
-   float angularStep;
-   ViewportSpace viewSpace;
-   LogicSpace logicSpace;
    glm::mat3 modelMatrix, visMatrix;
-
-
    float bodyX = 200, bodyY = 400;
    float wingX = 80, wingY = 125;
    float rataX = 200, rataY = 300;
@@ -75,8 +43,7 @@ protected:
    float sx, rad1, rad2, dir_wings = 1;
    int head_position_X, head_position_Y;
    int body_starting_pos_X, body_starting_pos_Y;
-   glm::vec3 hitbox1, hitbox2;
-   bool isDead, hasEscaped;
+   bool isDead, hasEscaped, gameOver;
    time_t time_since_alive;
    time_t start;
    int nr_of_lives = 3;
@@ -85,4 +52,5 @@ protected:
    int score = 0;
    float acceleration_factor = speed / 2.0f;
    int many_dead_ducks = 0;
+   glm::vec3 gameRefreshColor;
 };
