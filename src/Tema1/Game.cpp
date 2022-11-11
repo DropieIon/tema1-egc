@@ -28,13 +28,37 @@ void Game::Init()
 
     isDead = hasEscaped = gameOver = false;
     sx = 0.25f;
+    bodyX = 200;
+    bodyY = 400;
+    wingX = 80;
+    wingY = 125;
+    rataX = rand() % resolution.x;
+    rataY = rand() % resolution.y;
+    wing_speed = 1;
+    headRadius = 100;
+    do
+    {
+        dir_movement_X = rand() % 3 - 1;
+    } while (dir_movement_X == 0);
+    do
+    {
+        dir_movement_Y = rand() % 3 - 1;
+    } while (dir_movement_Y == 0);
+    speed = 300;
+    speed_save = speed;
+    dir_wings = 1;
+    nr_of_lives = 3;
+    nr_of_bullets = 3;
+    nr_of_points = 100;
+    score = 0;
+    acceleration_factor = speed / 2.0f;
+    many_dead_ducks = 0;
     start = time(NULL);
 
     gameRefreshColor = glm::vec3(0, 0, 0);
-    rad1 = M_PI/2.0f;
-    rad2 = - M_PI/2.0f;
+    rad1 = M_PI / 2.0f;
+    rad2 = -M_PI / 2.0f;
 
-    
     Mesh* head = object2D::CreateCircle("head", corner, 60, headRadius, glm::vec3(48/255.0f, 87/255.0f, 55/255.0f));
     AddMeshToList(head);
 
@@ -293,7 +317,7 @@ void Game::OnMouseBtnPress(int mouseX, int mouseY, int button, int mods)
             many_dead_ducks++;
     }
 
-    nr_of_bullets -= 1;
+    if(nr_of_bullets != 0) nr_of_bullets -= 1;
     if(!isDead && nr_of_bullets == 0) {
         hasEscaped = true;
     }
