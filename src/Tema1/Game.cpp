@@ -269,6 +269,39 @@ void Game::OnMouseMove(int mouseX, int mouseY, int deltaX, int deltaY)
 {
 }
 
+// Poetry cause I'm bored
+// Duty free airport is a scam
+// Visit Paris next sem
+// Palais Royal seems like a good idea
+// Had a creek, maybe I'll visit Ikea
+
+// Pepper is not so nice at restaurants
+// Cannon as it may be, it still haunts
+// Heard myth about this spice
+// I didn't arrive to suffice
+
+// Forest, bois de boulogne is
+// Drama about this there is
+// A concert though could be held here
+// Lots of tobacco can be smoked with beer
+
+// Naive as it may sound
+// Another idea is bound
+// As loud as it can be heard
+// Can you throw this word?
+
+// Prize there is not
+// Unfair it is indeed
+// But news of a new competition
+// In a tent nearby, could be a mission
+
+// Verb is weird to say
+// Leopard is even weirder to dismay
+// To improve this poetry
+// I shall bargain with thee
+
+
+
 bool Game::isPtInRectangle(int point_x, int point_y, int point1_x, int point1_y, int point2_x, int point2_y) {
     // point 1 > point 2
     point1_x -= headRadius / 2.0f;
