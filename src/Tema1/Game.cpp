@@ -154,6 +154,7 @@ void Game::ComputeConditions(glm::ivec2 &resolution) {
     }
     else if(isDead)
     {
+        // reset game
         angleDuck = M_PI;
         dir_movement_X = 0;
         dir_movement_Y = -1;
